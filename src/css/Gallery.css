@@ -1,0 +1,9 @@
+.frame img{
+    max-height: 45em !important;
+    margin: 0;
+}
+.frame {
+    margin:auto;
+    width: 65%;
+    padding: 2%;
+}

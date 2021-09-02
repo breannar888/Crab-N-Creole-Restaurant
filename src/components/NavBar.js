@@ -1,20 +1,32 @@
 //npm install react-router-dom to use Link
-import { Link } from "react-router-dom";
+import "../css/Nav.css";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <header>
-      <div>Crab n' Creole</div>
+    <header class="navbar">
+      <div class="logo">Crab n' Creole</div>
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink to="/" exact activeClassName="active">
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/menu">Menu</Link>
+            <NavLink to="/menu" activeClassName="active">
+              Menu
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact-us">Contact Us</Link>
+            <NavLink to="/contact-us" activeClassName="active">
+              Contact Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/location" activeClassName="active">
+              Locate Us
+            </NavLink>
           </li>
         </ul>
       </nav>

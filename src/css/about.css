@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.wrapper {
+    padding: 1%;
+    border: solid 1px brown; 
+    margin: 7em 0 0 0;
+}
+.about-section img{
+    width: 50%;
+    height: 50%;
+    max-width: 50%;
+    max-height: 35%;
+}
+.about-section {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.text {
+    color:pink;
+    font-size: 20px;
+    max-width: 50%;
+    border: solid 1px brown; 
+    /*Add white-space and overflow-wrap to prevent text from escaping container*/
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
