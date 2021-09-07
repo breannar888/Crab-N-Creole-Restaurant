@@ -63,7 +63,7 @@ class Form extends Component {
             value={this.state.date}
             onChange={this.handleDateChange}
           />
-          <select value={this.state.time} onChange={this.handleTimeChange}>
+          <select value={this.state.time} onChange={this.handleTimeChange} required>
             {times.map((eattime) => (
               <option key={eattime.id} value={eattime.value}>
                 {eattime.time}
@@ -74,6 +74,7 @@ class Form extends Component {
             type="number"
             min="1"
             max="20"
+            required
             placeholder="2 People"
             value={this.state.amount}
             onChange={this.handleAmountChange}

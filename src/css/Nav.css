@@ -6,6 +6,7 @@
     justify-content: space-between;
     width: 100%;
     font-family: 'Playfair Display', serif;
+    box-shadow: 0 4px 6px -6px rgb(11, 14, 48);
 }
 
 .navbar ul {
@@ -27,7 +28,7 @@
 .navbar a:after {
     display:block;
     content: '';
-    border-bottom: solid 1px rgb(11, 14, 48);  
+    border-bottom: double 3px rgb(11, 14, 48);  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
 }
@@ -37,7 +38,7 @@
 }
 
 .active {
-    border-bottom: 1px solid rgb(11, 14, 48);
+    border-bottom: 1px double rgb(11, 14, 48);
  }
 
 .logo {

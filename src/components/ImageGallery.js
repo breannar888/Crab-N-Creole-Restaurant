@@ -22,7 +22,7 @@ function ImageGallery() {
       autoPlay={true}
       infiniteLoop={true}
       showStatus={false}
-      showThumbs={false}
+      showThumbs={true}
       width={"100%"}
       dynamicHeight={false}
       interval={"5000"}

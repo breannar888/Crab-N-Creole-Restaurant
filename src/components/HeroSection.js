@@ -3,9 +3,6 @@ import "../css/hero.css";
 import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from "react-router-dom";
-import { Anchor } from "antd";
-
-const { Link } = Anchor;
 
 //custom styles for material-ui buttons
 const useStyles = makeStyles({

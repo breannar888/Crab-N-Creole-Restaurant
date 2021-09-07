@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 .frame img{
     max-height: 45em !important;
     margin: 0;
 }
 .frame {
     margin:auto;
-    width: 65%;
+    width: 75%;
     padding: 2%;
 }
+
