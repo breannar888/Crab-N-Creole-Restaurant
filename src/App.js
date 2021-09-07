@@ -1,10 +1,13 @@
 import { Route, Switch } from "react-router-dom";
 import Layout from "./components/Layout";
-import ContactUs from "./pages/ContactUs";
 import HomePage from "./pages/Home";
 import LocationPage from "./pages/Location";
 import MenuPage from "./pages/Menu";
-
+import GalleryPage from "./pages/Gallery";
+/*removes padding at the edge of the browser to make app fill in the
+entire browser - npm install normalize.css
+*/
+import 'normalize.css';
 
 function App() {
   return (
@@ -16,8 +19,8 @@ function App() {
         <Route path='/menu'>
             <MenuPage />
         </Route>
-        <Route path='/contact-us'>
-            <ContactUs />
+        <Route path='/gallery'>
+            <GalleryPage />
         </Route>
         <Route path='/location'>
             <LocationPage />

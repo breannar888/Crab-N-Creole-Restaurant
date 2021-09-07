@@ -1,25 +1,23 @@
 //layout for about cards
-import pic1 from "../images/dish1.jpg";
-import pic2 from "../images/dish3.jpg";
-import pic3 from "../images/dish4.jpg";
 import "../css/about.css";
+//get data and pass into elements
+import ABOUT_DATA from "../textdata/aboutdata";
 
 function AboutCard() {
   return (
     <div>
       <div className="wrapper">
-        <div className="about-section">
-          <img src={pic1} alt="" />
-          <div className="text">hihihihihi</div>
-        </div>
-        <div className="about-section">
-          <div className="text">hihi</div>
-          <img src={pic2} alt="" />
-        </div>
-        <div className="about-section">
-          <img src={pic3} alt="" />
-          <div className="text">hihi</div>
-        </div>
+        {ABOUT_DATA.map((about) => {
+          return (
+            <div className="about-section" key={about.id}>
+                <img src={about.pic} alt="" />
+                <div className="text">
+                  <h2>{about.title}</h2>
+                  <p>{about.description}</p>
+                </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

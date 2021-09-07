@@ -1,0 +1,61 @@
+.wrapper_contact{
+    background-color: rgb(196, 162, 117);
+    padding: 2%;
+    font-family: 'Raleway', sans-serif;
+}
+section {
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+.contact-info {
+    /*Add white-space and overflow-wrap to prevent text from escaping container*/
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    margin: auto;
+    margin: 0px 0px 0px 25px;
+}
+h2 {
+    margin: 10px 0px 20px 1.6em;
+}
+.text-wrap-mid {
+    border-left: 1px solid black;
+    width: 25%;
+}
+.text-wrap {
+    width: 25%;
+}
+.social-contact {
+    width: 100%;
+}
+.social-contact a {
+    margin: 0 2em 0 1em;
+    color: black;
+}
+.twitter:hover{
+    margin: 0 2em 0 1em;
+    color: rgb(0, 150, 209);
+}
+.insta:hover{
+    margin: 0 2em 0 1em;
+    color: rgb(155, 13, 173);
+}
+.facebook:hover{
+    margin: 0 2em 0 1em;
+    color: rgb(8, 8, 117);
+}
+.text-wrap li {
+    list-style: none;
+    margin: 0 0 1em 0;
+    font-size: 21px;
+}
+.text-wrap-mid li {
+    list-style: none;
+    margin: 0 0 1em 0;
+    font-size: 21px;
+}
+.text-wrap-mid form {
+    margin: 0 0 0 0;
+    font-size: 18px;
+}

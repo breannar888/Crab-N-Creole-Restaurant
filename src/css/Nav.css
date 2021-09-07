@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    font-family: 'Raleway', sans-serif;
-    border-bottom: 2px solid black;
+    font-family: 'Playfair Display', serif;
 }
 
 .navbar ul {
@@ -14,25 +14,35 @@
 }
 
 .navbar li {
-    margin: .3em;
-    padding: 1em;
-    font-size: 1.5em;
+    padding: 10px;
+    font-size: 1.4em;
+    margin-right: 2.4em;
 }
 
 .navbar a {
     text-decoration: none;
-    color:black;
+    color:rgb(196, 162, 117);
 }
 
-.navbar a:hover, a:active {
-    color: burlywood;
+.navbar a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 1px rgb(11, 14, 48);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
 }
 
 .active {
-    border-bottom: 1px solid burlywood;
+    border-bottom: 1px solid rgb(11, 14, 48);
  }
 
 .logo {
     margin: auto auto auto 4.5em;
     font-size: 2.5em;
+    color: rgb(11, 14, 48);
+    font-family: 'Montez', cursive;
 }

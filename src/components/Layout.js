@@ -1,4 +1,5 @@
 import NavBar from "./NavBar";
+import '../css/layout.css';
 
 function Layout(props) {
     return <div>

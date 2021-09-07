@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .wrapper {
-    padding: 1%;
-    border: solid 1px brown; 
-    margin: 7em 0 0 0;
+    
 }
 .about-section img{
     width: 50%;
@@ -12,16 +10,24 @@
     max-height: 35%;
 }
 .about-section {
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
+
 }
 .text {
-    color:pink;
+    color:black;
     font-size: 20px;
-    max-width: 50%;
-    border: solid 1px brown; 
+    width: 44%;
+    padding: 3%;
+    text-align: left;
     /*Add white-space and overflow-wrap to prevent text from escaping container*/
     white-space: pre-wrap;
     overflow-wrap: break-word;
+    font-family: 'Playfair Display', serif;
+    margin: auto;
+}
+.about-section p {
+    border-top: 1px solid rgb(11, 14, 48);
+    border-bottom: 1px solid rgba(54, 63, 158, 0.404);
+    padding: 3%;
 }

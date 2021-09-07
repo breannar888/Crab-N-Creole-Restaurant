@@ -17,6 +17,7 @@ function ImageGallery() {
   return (
       <div className="frame">
     <Carousel
+      stopOnHover={false}
       showArrows={true}
       autoPlay={true}
       infiniteLoop={true}
@@ -25,7 +26,6 @@ function ImageGallery() {
       width={"100%"}
       dynamicHeight={false}
       interval={"5000"}
-      stopOnHover={true}
     >
       <div>
         <img src={pic1} alt=""/>

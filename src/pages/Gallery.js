@@ -1,8 +1,8 @@
 import ContactBar from "../components/ContactBar";
 
-function LocationPage () {
+function GalleryPage () {
     return (
         <ContactBar />
-        );
+    );
 }
-export default LocationPage;
+export default GalleryPage;

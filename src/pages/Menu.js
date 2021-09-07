@@ -1,4 +1,8 @@
+import ContactBar from "../components/ContactBar";
+
 function MenuPage () {
-    return <h2>Menu</h2>
+    return (
+        <ContactBar />
+    );
 }
 export default MenuPage;
