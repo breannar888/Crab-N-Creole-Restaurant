@@ -12,6 +12,8 @@ import pic3 from "../images/dish3.jpg";
 import pic4 from "../images/dish4.jpg";
 import pic5 from "../images/dish6.jpg";
 import pic6 from "../images/dish7.jpg";
+import pic7 from "../images/hero1.jpg";
+import pic8 from "../images/hero3.jpg";
 
 function ImageGallery() {
   return (
@@ -44,6 +46,12 @@ function ImageGallery() {
       </div>
       <div>
         <img src={pic6} alt=""/>
+      </div>
+      <div>
+        <img src={pic7} alt=""/>
+      </div>
+      <div>
+        <img src={pic8} alt=""/>
       </div>
     </Carousel>
     </div>
