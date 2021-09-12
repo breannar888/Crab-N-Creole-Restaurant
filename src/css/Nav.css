@@ -1,50 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-family: 'Playfair Display', serif;
-    box-shadow: 0 4px 6px -6px rgb(11, 14, 48);
-    background-color: white;
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.nav-menu {
+  font-family: "Playfair Display", serif;
+  background-color: white;
+  width: 230px;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  -webkit-transition: 350ms;
+  transition: 350ms;
 }
 
-.navbar ul {
-    display: flex;
-    list-style: none;
+.nav-menu a {
+  text-decoration: none;
+  color: #c4a275;
 }
 
-.navbar li {
-    padding: 10px;
-    font-size: 1.4em;
-    margin-right: 2.4em;
+.nav-menu-active {
+  font-family: "Playfair Display", serif;
+  position: fixed;
+  left: -100%;
+  -webkit-transition: 850ms;
+  transition: 850ms;
+  height: 100vh;
 }
 
-.navbar a {
-    text-decoration: none;
-    color:rgb(196, 162, 117);
+.nav-menu-active a {
+  text-decoration: none;
+  color: #c4a275;
 }
 
-.navbar a:after {
-    display:block;
-    content: '';
-    border-bottom: double 3px rgb(11, 14, 48);  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
+.nav-menu-active ul li {
+  margin: 0.5em 0 0 0;
+  text-align: left;
+  padding: 10px;
+  font-size: 1.4em;
+  list-style: none;
 }
 
-.navbar a:hover::after {
-    transform: scaleX(1);
+nav ul {
+  margin-top: 4em;
 }
 
-.active {
-    border-bottom: 1px double rgb(11, 14, 48);
- }
+nav ul li {
+  margin: 0.5em 0 0 0;
+  text-align: left;
+  padding: 10px;
+  font-size: 1.4em;
+  list-style: none;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}
+
+.menu-btn {
+  cursor: pointer;
+  padding: 2%;
+  margin-top: 10px;
+  position: fixed;
+  z-index: 999;
+  color: #cfcfcf;
+}
+
+.menu-btn:hover {
+  color: #c4a275;
+}
 
 .logo {
-    margin: auto auto auto 4.5em;
-    font-size: 2.5em;
-    color: rgb(11, 14, 48);
-    font-family: 'Montez', cursive;
+  display: none;
+  position: relative;
 }
+
+@media only screen and (min-width: 1060px) {
+  .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .logo {
+    display: unset;
+    left: 0;
+    font-size: 2.5em;
+    color: #0b0e30;
+    font-family: "Montez", cursive;
+    margin: auto;
+    position: relative;
+    width: 50%;
+    padding-left: 2%;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .nav-menu {
+    position: unset;
+    width: 50%;
+    height: auto;
+    -webkit-transition: 0ms;
+    transition: 0ms;
+  }
+  .nav-menu ul {
+    margin: auto;
+    margin-top: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-menu li {
+    font-size: 1.4em;
+    margin-right: 1em;
+  }
+  .nav-menu li a:hover {
+    font-weight: unset;
+  }
+  .nav-menu li a:after {
+    display: block;
+    content: "";
+    border-bottom: double 3px #0b0e30;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  }
+  .nav-menu li a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .nav-menu .active {
+    border-bottom: solid 1px #0b0e30;
+  }
+  .nav-menu-active {
+    position: unset;
+    width: 50%;
+    height: auto;
+    -webkit-transition: 0ms;
+    transition: 0ms;
+  }
+  .nav-menu-active ul {
+    margin: auto;
+    margin-top: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav-menu-active ul li {
+    font-size: 1.4em;
+    margin-right: 1em;
+  }
+  .nav-menu-active ul li a:hover {
+    font-weight: unset;
+  }
+  .nav-menu-active ul li a:after {
+    display: block;
+    content: "";
+    border-bottom: double 3px #0b0e30;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 250ms ease-in-out;
+    transition: -webkit-transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  }
+  .nav-menu-active ul li a:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .nav-menu-active .active {
+    border-bottom: solid 1px #0b0e30;
+  }
+}
+
+/*
+.nav-menu {
+  background-color: rgb(255, 255, 255);
+  display: block;
+  width: 230px;
+  position: fixed;
+  z-index: 999;
+  height: 100vh;
+  left: 0;
+  transition: 350ms;
+}
+*/
+/*# sourceMappingURL=Nav.css.map */

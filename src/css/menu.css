@@ -20,11 +20,11 @@
     width: 50%;
     margin: auto;
 }
-h1 {
+.menu-content h1 {
     margin: 3em 0 2em 0;
     text-align: center;
     font-family: 'Montez', cursive;
-    font-size: 48px;
+    font-size: 42px;
     text-decoration: underline rgb(196, 162, 117);
 }
 .section-title {

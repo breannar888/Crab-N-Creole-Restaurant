@@ -53,7 +53,7 @@ function HeroSection() {
         </p>
       </div>
       <img src={backpic1} alt="" />
-      <div>
+      <div className="hero-content">
         <NavLink to="/menu" activeClassName="active">
           <Button className={classes.btnleft}>Explore Menus</Button>
         </NavLink>

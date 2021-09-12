@@ -1,7 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./pages/Home";
-import LocationPage from "./pages/Location";
 import MenuPage from "./pages/Menu";
 import GalleryPage from "./pages/Gallery";
 /*removes padding at the edge of the browser to make app fill in the
@@ -21,9 +20,6 @@ function App() {
         </Route>
         <Route path='/gallery'>
             <GalleryPage />
-        </Route>
-        <Route path='/location'>
-            <LocationPage />
         </Route>
       </Switch>
     </Layout>

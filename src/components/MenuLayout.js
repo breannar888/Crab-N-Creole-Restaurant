@@ -8,7 +8,7 @@ function MenuLayout() {
       {MENU_DATA.map((menu) => {
         return (
           <div className="menu-container">
-            <div className="menu-conent">
+            <div className="menu-content">
               <h1>{menu.menutitle}</h1>
               <div>
                 {menu.sectiontitle.map((section) => {
