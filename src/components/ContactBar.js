@@ -25,7 +25,9 @@ function ContactBar() {
         </div>
         <div className="text-wrap-mid" id="reservation">
           <h2>Make A Reservation</h2>
+          <div className="form-wrap">
           <ReservationForm/>
+          </div>
         </div>
         <div className="text-wrap-mid">
           <h2>Leave A Review</h2>

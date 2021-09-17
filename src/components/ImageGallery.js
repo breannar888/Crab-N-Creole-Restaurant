@@ -7,7 +7,6 @@ import "../css/Gallery.css";
 
 //importing pictures from images folder
 import pic1 from "../images/dish1.jpg";
-import pic2 from "../images/dish5.jpg";
 import pic3 from "../images/dish3.jpg";
 import pic4 from "../images/dish4.jpg";
 import pic5 from "../images/dish6.jpg";
@@ -31,9 +30,6 @@ function ImageGallery() {
     >
       <div>
         <img src={pic1} alt=""/>
-      </div>
-      <div>
-        <img src={pic2} alt=""/>
       </div>
       <div>
         <img src={pic3} alt=""/>

@@ -22,7 +22,6 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: rgb(35, 40, 87);
 }
-
 select {
     margin: 1em 0 0 0;
     width: 98.5%;

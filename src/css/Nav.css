@@ -8,6 +8,7 @@
   left: 0;
   -webkit-transition: 350ms;
   transition: 350ms;
+  z-index: 998;
 }
 
 .nav-menu a {
@@ -22,6 +23,7 @@
   -webkit-transition: 850ms;
   transition: 850ms;
   height: 100vh;
+  z-index: 999;
 }
 
 .nav-menu-active a {
@@ -76,24 +78,31 @@ nav ul li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 1%;
+    z-index: 999;
+    border-bottom: solid 1px #dbdbdb;
   }
   .logo {
     display: unset;
     left: 0;
     font-size: 2.5em;
-    color: #0b0e30;
     font-family: "Montez", cursive;
     margin: auto;
     position: relative;
     width: 50%;
     padding-left: 2%;
+    text-decoration: none;
+  }
+  .logo-txt {
+    color: #0b0e30;
+    text-decoration: none;
   }
   .menu-btn {
     display: none;
   }
   .nav-menu {
     position: unset;
-    width: 50%;
+    width: 52%;
     height: auto;
     -webkit-transition: 0ms;
     transition: 0ms;
@@ -114,28 +123,11 @@ nav ul li a:hover {
   }
   .nav-menu li a:hover {
     font-weight: unset;
-  }
-  .nav-menu li a:after {
-    display: block;
-    content: "";
-    border-bottom: double 3px #0b0e30;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transition: -webkit-transform 250ms ease-in-out;
-    transition: -webkit-transform 250ms ease-in-out;
-    transition: transform 250ms ease-in-out;
-    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  }
-  .nav-menu li a:hover::after {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  .nav-menu .active {
-    border-bottom: solid 1px #0b0e30;
+    color: rgba(196, 162, 117, 0.74);
   }
   .nav-menu-active {
     position: unset;
-    width: 50%;
+    width: 52%;
     height: auto;
     -webkit-transition: 0ms;
     transition: 0ms;
@@ -156,37 +148,7 @@ nav ul li a:hover {
   }
   .nav-menu-active ul li a:hover {
     font-weight: unset;
-  }
-  .nav-menu-active ul li a:after {
-    display: block;
-    content: "";
-    border-bottom: double 3px #0b0e30;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transition: -webkit-transform 250ms ease-in-out;
-    transition: -webkit-transform 250ms ease-in-out;
-    transition: transform 250ms ease-in-out;
-    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
-  }
-  .nav-menu-active ul li a:hover::after {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  .nav-menu-active .active {
-    border-bottom: solid 1px #0b0e30;
+    color: rgba(196, 162, 117, 0.74);
   }
 }
-
-/*
-.nav-menu {
-  background-color: rgb(255, 255, 255);
-  display: block;
-  width: 230px;
-  position: fixed;
-  z-index: 999;
-  height: 100vh;
-  left: 0;
-  transition: 350ms;
-}
-*/
 /*# sourceMappingURL=Nav.css.map */

@@ -5,13 +5,13 @@ import { Anchor } from "antd";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import useWindowDimensions from "./windowdimensons";
+import useWindowDimensions from "./windowdimensons.js";
 const { Link } = Anchor;
 
+
 function NavBar() {
-  const [isOpen, setisOpen] = useState(false);
+  const [isOpen, setisOpen] = useState(true);
   const showMobileMenu = () => setisOpen(!isOpen);
-  const { height, width } = useWindowDimensions();
 
   //if isOpen=false and width of screen >= 1068 set isOpen=true
   //set const to width of screen, check through that
@@ -19,16 +19,16 @@ function NavBar() {
   return (
     <>
       <div className="menu-btn">
-        <FontAwesomeIcon
-          size="lg"
-          icon={faBars}
-          onClick={showMobileMenu}
-        />
+        <FontAwesomeIcon size="lg" icon={faBars} onClick={showMobileMenu} />
       </div>
       <div className="nav-container">
-        <div className="logo">Crab N' Creole</div>
+        <div  className="logo">
+          <NavLink to="/" exact className="logo-txt">
+            Crab N' Creole
+          </NavLink>
+        </div>
         <nav className={isOpen ? "nav-menu-active" : "nav-menu"}>
-        <ul onClick={showMobileMenu}>
+          <ul onClick={showMobileMenu}>
             <li>
               <NavLink to="/" exact activeClassName="active">
                 Home
