@@ -2,17 +2,6 @@
 import "../css/about.css";
 //get data and pass into elements
 import ABOUT_DATA from "../textdata/aboutdata";
-import useWindowDimensions from "./windowdimensons.js";
-
-const Component = () => {
-  const { height, width } = useWindowDimensions();
-
-  return (
-    <div>
-      width: {width} ~ height: {height}
-    </div>
-  );
-};
 
 function AboutCard() {
   return (

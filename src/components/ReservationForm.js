@@ -39,9 +39,7 @@ class Form extends Component {
 
   handleSubmit = (event) => {
     alert(
-      "Reservation Info:\nDate: " + `${this.state.date}` 
-      + "\nTime: " + `${this.state.time}` 
-      + "\nPeople: " + `${this.state.amount}`
+      `${this.state.date}${this.state.time}${this.state.amount}`
     );
     event.preventDefault();
   };

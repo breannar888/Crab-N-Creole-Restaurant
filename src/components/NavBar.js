@@ -5,7 +5,6 @@ import { Anchor } from "antd";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import useWindowDimensions from "./windowdimensons.js";
 const { Link } = Anchor;
 
 
