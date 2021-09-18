@@ -10,3 +10,9 @@
     padding: 2%;
 }
 
+@media only screen and (max-width: 860px) {
+    .frame{
+    padding-bottom: 11em !important;
+    padding-top: 10em !important;
+    }
+}

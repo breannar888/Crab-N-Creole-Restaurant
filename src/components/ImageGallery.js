@@ -8,8 +8,8 @@ import IMAGE_DATA from "../textdata/gallerydata";
 
 function ImageGallery() {
   return (
-    <div>
-      <div className="frame">
+    <div  className="frame">
+      <div>
         <Carousel
           stopOnHover={false}
           showArrows={true}
