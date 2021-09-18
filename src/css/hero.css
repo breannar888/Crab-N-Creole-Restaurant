@@ -71,17 +71,7 @@
   }
 }
 
-@media only screen and (max-width: 810px) {
-  .hero-logo {
-    font-size: 55px;
-  }
-  .hero-phrase {
-    font-size: 18px;
-  }
-  .hero-btn {
-    padding: 0%;
-  }
-}
+
 
 @media only screen and (max-width: 480px) {
   .hero-logo {

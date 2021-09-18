@@ -59,7 +59,7 @@
     display: block;
   }
   .text {
-    display: block;
+    max-width: 90vw;
   }
 }
 /*# sourceMappingURL=about.css.map */
