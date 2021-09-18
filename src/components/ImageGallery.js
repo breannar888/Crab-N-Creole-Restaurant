@@ -8,27 +8,28 @@ import IMAGE_DATA from "../textdata/gallerydata";
 
 function ImageGallery() {
   return (
+    <div>
       <div className="frame">
-    <Carousel
-      stopOnHover={false}
-      showArrows={true}
-      autoPlay={true}
-      infiniteLoop={true}
-      showStatus={false}
-      showThumbs={true}
-      width={"100%"}
-      dynamicHeight={true}
-      interval={"5000"}
-    >
-
-    {IMAGE_DATA.map((image) => {
-      return (
-        <div key={image.id}>
-          <img src={image.image} alt=""/>
-        </div>
-      )
-    })}
-    </Carousel>
+        <Carousel
+          stopOnHover={false}
+          showArrows={true}
+          autoPlay={true}
+          infiniteLoop={true}
+          showStatus={false}
+          showThumbs={true}
+          width={"100%"}
+          dynamicHeight={true}
+          interval={"5000"}
+        >
+          {IMAGE_DATA.map((image) => {
+            return (
+              <div key={image.id}>
+                <img src={image.image} alt="" />
+              </div>
+            );
+          })}
+        </Carousel>
+      </div>
     </div>
   );
 }
