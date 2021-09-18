@@ -13,7 +13,7 @@ class Form extends Component {
 
     this.state = {
       date: "",
-      time: "",
+      time: "10:30 AM",
       amount: "",
     };
     
@@ -39,7 +39,7 @@ class Form extends Component {
 
   handleSubmit = (event) => {
     alert(
-      `${this.state.date}${this.state.time}${this.state.amount}`
+      `Reservation Information: \n\nDate:\n${this.state.date}\nTime:\n${this.state.time}\nPeople:\n${this.state.amount}`
     );
     event.preventDefault();
   };
@@ -61,9 +61,9 @@ class Form extends Component {
             value={this.state.date}
             onChange={this.handleDateChange}
           />
-          <select value={this.state.time} onChange={this.handleTimeChange} required>
+          <select value={this.state.time} onChange={this.handleTimeChange} defaultValue={{ id: '1', time: '10:00 AM'}} required>
             {times.map((eattime) => (
-              <option key={eattime.id} value={eattime.value}>
+              <option key={eattime.id}>
                 {eattime.time}
               </option>
             ))}
