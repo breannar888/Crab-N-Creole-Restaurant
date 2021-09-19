@@ -34,9 +34,9 @@
   padding: 5%;
   margin: auto;
   height: 70px;
-  width: 60%;
+  width: 65%;
 }
-@media only screen and (max-width: 1180px) {
+@media only screen and (max-width: 1200px) {
   .hero-btn {
     padding: 5%;
     margin: auto;
@@ -54,31 +54,32 @@
   }
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 1050px) {
   .hero-phrase {
     font-size: 20px;
     font-family: "Playfair Display", serif;
   }
   .hero-text {
-    margin-top: 8%;
+    margin-top: 3%;
     width: 100%;
   }
   .hero-logo {
-    font-size: 60px;
+    font-size: 65px;
   }
   .hero-btn {
-    width: 60%;
+    width: 65%;
   }
 }
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   .hero-logo {
     font-size: 55px;
-    margin-top: 7%;
+    margin-top: 0%;
+    margin-bottom: 7%;
   }
   .hero-text {
-    margin-top: 0px;
+    margin-top: 8%;
   }
   .hero-btn {
     padding: 0%;

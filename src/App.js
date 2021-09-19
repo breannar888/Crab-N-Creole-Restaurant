@@ -3,14 +3,16 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/Home";
 import MenuPage from "./pages/Menu";
 import GalleryPage from "./pages/Gallery";
+import ScrollToTop from "./components/ScrollToTop";
 /*removes padding at the edge of the browser to make app fill in the
 entire browser - npm install normalize.css
 */
 import 'normalize.css';
-
+//
 function App() {
   return (
     <Layout>
+      <ScrollToTop />
       <Switch>
         <Route path='/' exact>
             <HomePage />
