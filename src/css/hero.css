@@ -56,18 +56,19 @@
 
 @media only screen and (max-width: 1050px) {
   .hero-phrase {
-    font-size: 20px;
+    font-size: 27px;
     font-family: "Playfair Display", serif;
   }
   .hero-text {
-    margin-top: 3%;
+    margin-top: 0px;
     width: 100%;
   }
   .hero-logo {
-    font-size: 65px;
+    margin-top: 7%;
+    font-size: 78px;
   }
   .hero-btn {
-    width: 65%;
+    width: 63%;
   }
 }
 

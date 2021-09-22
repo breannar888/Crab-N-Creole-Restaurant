@@ -5,7 +5,6 @@ form {
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.281);
 }
-
 .reserve {
   margin: auto;
   width: 80%;
@@ -14,29 +13,25 @@ form {
   background-color: white;
   border-radius: 2%;
 }
-
 input {
   width: 97%;
   height: 2em;
   background-color: white;
   border: solid 1px white;
   border-bottom: solid 1px rgba(0, 0, 0, 0.281);
+  &:focus {
+    background-color: rgba(209, 209, 209, 0.61);
+  }
 }
-
-input:focus {
-  background-color: rgba(209, 209, 209, 0.61);
-}
-
 button[type="submit"] {
   width: 100%;
-  background-color: #0b0e30;
+  background-color: rgb(11, 14, 48);
   color: white;
   height: 2em;
-  border: 1px solid #0b0e30;
-}
-
-button[type="submit"]:hover, button[type="submit"]:focus {
-  background-color: #010e7e;
+  border: 1px solid rgb(11, 14, 48);
+  &:hover, &:focus {
+    background-color: rgb(1, 14, 126);
+  }
 }
 
 select {
@@ -45,12 +40,10 @@ select {
   background-color: white;
   border: solid 1px white;
   border-bottom: solid 1px rgba(0, 0, 0, 0.281);
+  &:focus {
+    background-color: rgba(209, 209, 209, 0.61);
+  }
 }
-
-select:focus {
-  background-color: rgba(209, 209, 209, 0.61);
-}
-
 label {
   color: grey;
   font-size: 18px;
@@ -58,4 +51,3 @@ label {
   margin-bottom: 5%;
   margin-left: 3%;
 }
-/*# sourceMappingURL=reservationform.css.map */

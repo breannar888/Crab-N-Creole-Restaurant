@@ -12,6 +12,17 @@
   a {
     text-decoration: none;
     color: rgb(196, 162, 117);
+    &:focus {
+      outline: 1px solid blue;
+      outline-offset: 5px;
+    }
+    &:focus-visible{
+      outline: 1px solid blue;
+      outline-offset: 5px;
+    }
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
   }
 }
 
@@ -25,6 +36,14 @@
   a {
     text-decoration: none;
     color: rgb(196, 162, 117);
+    &:focus {
+      outline: 1px solid rgb(0, 3, 206);
+      outline-offset: 5px;
+    }
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
   }
 
   ul li {
@@ -52,14 +71,23 @@ nav ul {
 }
 .menu-btn {
   cursor: pointer;
-  padding: 2%;
+  padding: 1.4%;
   margin-top: 10px;
   position: fixed;
   z-index: 999;
   color: rgb(207, 207, 207);
+  background-color: transparent;
+  border: transparent;
+  outline: 0;
 
   &:hover {
     color: rgb(196, 162, 117);
+  }
+  &:focus {
+    outline: 1px solid blue;
+  }
+  &:focus:not(:focus-visible) {
+    outline: none;
   }
 }
 .logo {
@@ -89,6 +117,10 @@ nav ul {
   .logo-txt{
     color: rgb(11, 14, 48);
     text-decoration: none;
+    &:focus {
+      outline: 1px solid rgb(0, 3, 206);
+      outline-offset: 5px;
+    }
   }
   .menu-btn {
     display: none;
@@ -111,6 +143,10 @@ nav ul {
         font-weight: unset;
         color: rgba(196, 162, 117, 0.74);
       }
+      &:focus {
+        outline: 1px solid rgb(0, 3, 206);
+        outline-offset: 5px;
+      }
       
     }
   }
@@ -131,6 +167,10 @@ nav ul {
       a:hover {
         font-weight: unset;
         color: rgba(196, 162, 117, 0.74);
+      }
+      &:focus {
+        outline: 1px solid rgb(0, 3, 206);
+        outline-offset: 5px;
       }
     }
   }

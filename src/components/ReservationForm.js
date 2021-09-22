@@ -3,9 +3,7 @@ import "../css/reservationform.css";
 import TIME_DATA from "../textdata/formtimedata";
 import React, { Component } from "react";
 //npm install moment --save, gets current date
-import moment from 'moment';
-
-
+import moment from "moment";
 
 class Form extends Component {
   constructor(props) {
@@ -16,7 +14,6 @@ class Form extends Component {
       time: "10:30 AM",
       amount: "",
     };
-    
   }
 
   handleDateChange = (event) => {
@@ -44,15 +41,15 @@ class Form extends Component {
     event.preventDefault();
   };
 
-  
-
   render() {
     let times = TIME_DATA;
 
     return (
       <div className="reserve">
+        <label for="datefield">Make a Reservation</label>
         <form onSubmit={this.handleSubmit}>
           <input
+            aria-label="Select Date"
             type="date"
             required
             id="datefield"
@@ -61,14 +58,19 @@ class Form extends Component {
             value={this.state.date}
             onChange={this.handleDateChange}
           />
-          <select value={this.state.time} onChange={this.handleTimeChange} defaultValue={{ id: '1', time: '10:00 AM'}} required>
+          <select
+            aria-label="Pick A Time"
+            value={this.state.time}
+            onChange={this.handleTimeChange}
+            defaultValue={{ id: "1", time: "10:00 AM" }}
+            required
+          >
             {times.map((eattime) => (
-              <option key={eattime.id}>
-                {eattime.time}
-              </option>
+              <option key={eattime.id}>{eattime.time}</option>
             ))}
           </select>
           <input
+            aria-label="Input number of people for reservation"
             type="number"
             min="1"
             max="20"

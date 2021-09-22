@@ -1,129 +1,142 @@
-.wrapper_contact{
-    background-color: rgb(196, 162, 117);
-    padding: 2%;
-    font-family: 'Raleway', sans-serif;
+.wrapper_contact {
+  background-color: rgb(196, 162, 117);
+  padding: 2%;
+  font-family: "Raleway", sans-serif;
 }
 section {
-    width: 80%;
-    display: flex;
-    margin: auto;
-    justify-content: space-between;
-    h2 {
-        margin: 10px 0px 20px 1.6em;
-    }
+  width: 80%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  h2 {
+    margin: 10px 0px 20px 1.6em;
+  }
 }
 .contact-info {
-    /*Add white-space and overflow-wrap to prevent text from escaping container*/
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
-    margin: auto;
-    margin: 0px 0px 0px 25px;
+  /*Add white-space and overflow-wrap to prevent text from escaping container*/
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  margin: auto;
+  margin: 0px 0px 0px 25px;
 }
 .text-wrap-mid {
-    border-left: 1px solid black;
-    width: 25%;
+  border-left: 1px solid black;
+  width: 25%;
 }
 .text-wrap {
-    width: 25%;
+  width: 25%;
 }
 .form-wrap {
-    width: 100%;
+  width: 100%;
 }
 .social-contact {
-    width: 100%;
+  width: 100%;
 }
 .social-contact a {
-    margin: 0 2em 0 1em;
-    color: black;
+  margin: 0 2em 0 1em;
+  color: black;
 }
-.twitter:hover{
+.twitter {
+  &:hover,
+  &:focus {
     margin: 0 2em 0 1em;
     color: rgb(0, 150, 209);
+    outline-offset: 3px;
+  }
 }
-.insta:hover{
+.insta {
+  &:hover,
+  &:focus {
     margin: 0 2em 0 1em;
     color: rgb(155, 13, 173);
+    outline-offset: 3px;
+  }
 }
-.facebook:hover{
+.facebook {
+  &:hover,
+  &:focus {
     margin: 0 2em 0 1em;
     color: rgb(8, 8, 117);
+    outline-offset: 3px;
+  }
 }
 .text-wrap li {
-    list-style: none;
-    margin: 0 0 1em 0;
-    font-size: 21px;
+  list-style: none;
+  margin: 0 0 1em 0;
+  font-size: 21px;
 }
 .text-wrap-mid li {
-    list-style: none;
-    margin: 0 0 1em 0;
-    font-size: 21px;
+  list-style: none;
+  margin: 0 0 1em 0;
+  font-size: 21px;
 }
 .text-wrap-mid form {
-    margin: 0 0 0 0;
-    font-size: 18px;
+  margin: 0 0 0 0;
+  font-size: 18px;
 }
-@media only screen and (max-width:1560px) {
-    .text-wrap {
-        margin: 0;
-        h2 {
-            font-size: 20px;
-        }
-        ul li {
-            font-size: 18px;
-        }
+h2 {
+  color: rgb(0, 0, 0);
+}
+@media only screen and (max-width: 1560px) {
+  .text-wrap {
+    margin: 0;
+    h2 {
+      font-size: 20px;
     }
-    .text-wrap-mid {
-        h2 {
-            font-size: 20px;
-        }
-        ul li {
-            font-size: 15px;
-        }
+    ul li {
+      font-size: 18px;
     }
-    .wrapper_contact {
-        section {
-            width: 100%;
-        }
+  }
+  .text-wrap-mid {
+    h2 {
+      font-size: 20px;
     }
+    ul li {
+      font-size: 15px;
+    }
+  }
+  .wrapper_contact {
+    section {
+      width: 100%;
+    }
+  }
 }
 @media only screen and (max-width: 945px) {
-    .wrapper_contact {
-        section {
-            width: 100%;
-        }
-        .text-wrap {
-            ul li {
-                font-size: 14px;
-            }
-        }
-        .text-wrap-mid {
-            ul li {
-                font-size: 10px;
-            }
-        }
+  .wrapper_contact {
+    section {
+      width: 100%;
     }
-    
+    .text-wrap {
+      ul li {
+        font-size: 14px;
+      }
+    }
+    .text-wrap-mid {
+      ul li {
+        font-size: 10px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 685px) {
-    .wrapper_contact {
-        section {
-            display: block;
-        }
-        .text-wrap {
-            width: 100%;
-            text-align: center;
-            border-bottom: solid 1px black;
-        }
-        .text-wrap-mid {
-            width: 100%;
-            text-align: center;
-            border-bottom: solid 1px black;
-            border-left: unset;
-            ul li {
-                font-size: 15px;
-            }
-        }
+  .wrapper_contact {
+    section {
+      display: block;
     }
-    
+    .text-wrap {
+      width: 100%;
+      text-align: center;
+      border-bottom: solid 1px black;
+    }
+    .text-wrap-mid {
+      width: 100%;
+      text-align: center;
+      border-bottom: solid 1px black;
+      border-left: unset;
+      ul li {
+        font-size: 15px;
+      }
+    }
+  }
 }

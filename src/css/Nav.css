@@ -16,6 +16,20 @@
   color: #c4a275;
 }
 
+.nav-menu a:focus {
+  outline: 1px solid blue;
+  outline-offset: 5px;
+}
+
+.nav-menu a:focus-visible {
+  outline: 1px solid blue;
+  outline-offset: 5px;
+}
+
+.nav-menu a:focus:not(:focus-visible) {
+  outline: none;
+}
+
 .nav-menu-active {
   font-family: "Playfair Display", serif;
   position: fixed;
@@ -29,6 +43,15 @@
 .nav-menu-active a {
   text-decoration: none;
   color: #c4a275;
+}
+
+.nav-menu-active a:focus {
+  outline: 1px solid #0003ce;
+  outline-offset: 5px;
+}
+
+.nav-menu-active a:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .nav-menu-active ul li {
@@ -57,15 +80,26 @@ nav ul li a:hover {
 
 .menu-btn {
   cursor: pointer;
-  padding: 2%;
+  padding: 1.4%;
   margin-top: 10px;
   position: fixed;
   z-index: 999;
   color: #cfcfcf;
+  background-color: transparent;
+  border: transparent;
+  outline: 0;
 }
 
 .menu-btn:hover {
   color: #c4a275;
+}
+
+.menu-btn:focus {
+  outline: 1px solid blue;
+}
+
+.menu-btn:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .logo {
@@ -97,6 +131,10 @@ nav ul li a:hover {
     color: #0b0e30;
     text-decoration: none;
   }
+  .logo-txt:focus {
+    outline: 1px solid #0003ce;
+    outline-offset: 5px;
+  }
   .menu-btn {
     display: none;
   }
@@ -125,6 +163,10 @@ nav ul li a:hover {
     font-weight: unset;
     color: rgba(196, 162, 117, 0.74);
   }
+  .nav-menu li:focus {
+    outline: 1px solid #0003ce;
+    outline-offset: 5px;
+  }
   .nav-menu-active {
     position: unset;
     width: 52%;
@@ -149,6 +191,10 @@ nav ul li a:hover {
   .nav-menu-active ul li a:hover {
     font-weight: unset;
     color: rgba(196, 162, 117, 0.74);
+  }
+  .nav-menu-active ul li:focus {
+    outline: 1px solid #0003ce;
+    outline-offset: 5px;
   }
 }
 /*# sourceMappingURL=Nav.css.map */

@@ -5,23 +5,35 @@ import { Anchor } from "antd";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-const { Link } = Anchor;
+//import useWindowDimensions from "./windowdimensons";
 
+
+const { Link } = Anchor;
 
 function NavBar() {
   const [isOpen, setisOpen] = useState(true);
   const showMobileMenu = () => setisOpen(!isOpen);
+  /*
+        hide nav when screen size is reduced, currently
+        when nav is on nav-menu in desktop view, it'll show when switching to
+        mobile menu view (mobile menu is opened), i want it to start
+        off closed anytime its under 1060px but unsure how to do this
 
-  //if isOpen=false and width of screen >= 1068 set isOpen=true
-  //set const to width of screen, check through that
+        const closeMobileMenu = () => {
+          if (width > "1060") {
+          setisOpen(false);
+          }
+        };
+          - add event listener so it triggers when screen size is changed?
+  */
 
   return (
     <>
-      <div className="menu-btn">
+      <button className="menu-btn" tabIndex="1" onKeyPress={showMobileMenu}>
         <FontAwesomeIcon size="lg" icon={faBars} onClick={showMobileMenu} />
-      </div>
+      </button>
       <div className="nav-container">
-        <div  className="logo">
+        <div className="logo">
           <NavLink to="/" exact className="logo-txt">
             Crab N' Creole
           </NavLink>

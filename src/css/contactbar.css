@@ -1,7 +1,7 @@
 .wrapper_contact {
   background-color: #c4a275;
   padding: 2%;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 section {
@@ -49,19 +49,22 @@ section h2 {
   color: black;
 }
 
-.twitter:hover {
+.twitter:hover, .twitter:focus {
   margin: 0 2em 0 1em;
   color: #0096d1;
+  outline-offset: 3px;
 }
 
-.insta:hover {
+.insta:hover, .insta:focus {
   margin: 0 2em 0 1em;
   color: #9b0dad;
+  outline-offset: 3px;
 }
 
-.facebook:hover {
+.facebook:hover, .facebook:focus {
   margin: 0 2em 0 1em;
   color: #080875;
+  outline-offset: 3px;
 }
 
 .text-wrap li {
@@ -79,6 +82,10 @@ section h2 {
 .text-wrap-mid form {
   margin: 0 0 0 0;
   font-size: 18px;
+}
+
+h2 {
+  color: black;
 }
 
 @media only screen and (max-width: 1560px) {
