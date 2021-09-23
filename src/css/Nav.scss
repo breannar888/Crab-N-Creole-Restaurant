@@ -37,7 +37,11 @@
     text-decoration: none;
     color: rgb(196, 162, 117);
     &:focus {
-      outline: 1px solid rgb(0, 3, 206);
+      outline: 1px solid blue;
+      outline-offset: 5px;
+    }
+    &:focus-visible{
+      outline: 1px solid blue;
       outline-offset: 5px;
     }
     &:focus:not(:focus-visible) {
@@ -83,16 +87,23 @@ nav ul {
   &:hover {
     color: rgb(196, 162, 117);
   }
-  &:focus {
-    outline: 1px solid blue;
-  }
-  &:focus:not(:focus-visible) {
-    outline: none;
-  }
 }
 .logo {
   display: none;
   position: relative;
+  a {
+    &:focus {
+      outline: 1px solid blue;
+      outline-offset: 5px;
+    }
+    &:focus-visible{
+      outline: 1px solid blue;
+      outline-offset: 5px;
+    }
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
 }
 /////
 

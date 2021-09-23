@@ -46,7 +46,12 @@
 }
 
 .nav-menu-active a:focus {
-  outline: 1px solid #0003ce;
+  outline: 1px solid blue;
+  outline-offset: 5px;
+}
+
+.nav-menu-active a:focus-visible {
+  outline: 1px solid blue;
   outline-offset: 5px;
 }
 
@@ -94,17 +99,23 @@ nav ul li a:hover {
   color: #c4a275;
 }
 
-.menu-btn:focus {
-  outline: 1px solid blue;
-}
-
-.menu-btn:focus:not(:focus-visible) {
-  outline: none;
-}
-
 .logo {
   display: none;
   position: relative;
+}
+
+.logo a:focus {
+  outline: 1px solid blue;
+  outline-offset: 5px;
+}
+
+.logo a:focus-visible {
+  outline: 1px solid blue;
+  outline-offset: 5px;
+}
+
+.logo a:focus:not(:focus-visible) {
+  outline: none;
 }
 
 @media only screen and (min-width: 1060px) {
