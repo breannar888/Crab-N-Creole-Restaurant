@@ -102,6 +102,7 @@ nav ul li a:hover {
 .logo {
   display: none;
   position: relative;
+  color: #0b0e30;
 }
 
 .logo a:focus {
@@ -178,6 +179,24 @@ nav ul li a:hover {
     outline: 1px solid #0003ce;
     outline-offset: 5px;
   }
+  .nav-menu .shopicon {
+    width: 10%;
+    border-radius: 10%;
+  }
+  .nav-menu .shopicon a {
+    width: 100%;
+    color: #0b0e30;
+  }
+  .nav-menu .shopicon a:hover {
+    color: #141955;
+  }
+  .nav-menu .shop {
+    width: 70%;
+    margin: auto;
+  }
+  .nav-menu .shop:hover {
+    color: #1b2596;
+  }
   .nav-menu-active {
     position: unset;
     width: 52%;
@@ -206,6 +225,24 @@ nav ul li a:hover {
   .nav-menu-active ul li:focus {
     outline: 1px solid #0003ce;
     outline-offset: 5px;
+  }
+  .nav-menu-active .shopicon {
+    width: 10%;
+    border-radius: 10%;
+  }
+  .nav-menu-active .shopicon a {
+    width: 100%;
+    color: #0b0e30;
+  }
+  .nav-menu-active .shopicon a:hover {
+    color: #141955;
+  }
+  .nav-menu-active .shop {
+    width: 70%;
+    margin: auto;
+  }
+  .nav-menu-active .shop:hover {
+    color: #1b2596;
   }
 }
 /*# sourceMappingURL=Nav.css.map */

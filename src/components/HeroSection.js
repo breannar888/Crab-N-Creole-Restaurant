@@ -69,9 +69,14 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 }));
-/*
 
-*/
+//transfer to seperate component
+const scrollToBottom = () =>{ 
+  window.scrollTo({ 
+    top: document.documentElement.scrollHeight, 
+    behavior: 'smooth'
+  }); 
+}; 
 
 function HeroSection() {
   const classes = useStyles();
@@ -83,10 +88,10 @@ function HeroSection() {
           Serving the best creole flavors since 1955
         </p>
         <div className="hero-btn">
-          <NavLink to="/menu" activeClassName="active">
-            <Button className={classes.btnleft}>Explore Menus</Button>
+          <NavLink to="/order" activeClassName="active">
+            <Button className={classes.btnleft}>Order Now</Button>
           </NavLink>
-          <Button className={classes.btnright} href="#reservation">
+          <Button className={classes.btnright} onClick={scrollToBottom}>
             Reservations
           </Button>
         </div>

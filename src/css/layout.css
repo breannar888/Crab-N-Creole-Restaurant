@@ -2,3 +2,9 @@
     min-height: 100vh;
     min-width: 100vw;
 }
+::selection {
+    background: rgb(196, 196, 196);
+}
+::-moz-selection {
+    background: rgb(196, 196, 196);
+  }

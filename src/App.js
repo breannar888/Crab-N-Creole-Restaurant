@@ -7,25 +7,44 @@ import ScrollToTop from "./components/ScrollToTop";
 /*removes padding at the edge of the browser to make app fill in the
 entire browser - npm install normalize.css
 */
-import 'normalize.css';
-//
+import "normalize.css";
+import OrderPage from "./pages/Order";
+import CheckoutPage from "./pages/CheckoutPage";
+import CartContextProvider from "./context/CartContext";
 function App() {
   return (
-    <Layout>
-      <ScrollToTop />
-      <Switch>
-        <Route path='/' exact>
-            <HomePage />
-        </Route>
-        <Route path='/menu'>
-            <MenuPage />
-        </Route>
-        <Route path='/gallery'>
-            <GalleryPage />
-        </Route>
-      </Switch>
-    </Layout>
+    <>
+      <CartContextProvider>
+        <Layout>
+          <ScrollToTop />
+          <Switch>
+            <Route path="/" exact>
+              <HomePage />
+            </Route>
+            <Route path="/menu">
+              <MenuPage />
+            </Route>
+            <Route path="/gallery">
+              <GalleryPage />
+            </Route>
+            <Route path="/order">
+              <OrderPage />
+            </Route>
+            <Route path="/checkout">
+              <CheckoutPage />
+            </Route>
+          </Switch>
+        </Layout>
+      </CartContextProvider>
+    </>
   );
 }
 
 export default App;
+/*
+const [showCart, setShowCart] = useState(false);
+
+<CartContext.Provider value={{ showCart, setShowCart }}>
+        {showCart ? <PopupCart /> : <OrderMenu />}
+      </CartContext.Provider>
+*/

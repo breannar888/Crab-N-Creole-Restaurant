@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACX,OAAO,EAAE,EAAE;CACd;;AACD,AAAA,EAAE,CAAC;EACC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,iBAAiB;EAC9B,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,OAAkB;EACzB,cAAc,EAAE,EAAE;EAClB,eAAe,EAAE,SAAS,CAAC,OAAkB;CAChD",
+    "sources": [
+        "orderpage.scss"
+    ],
+    "names": [],
+    "file": "orderpage.css"
+}

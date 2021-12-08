@@ -1,0 +1,18 @@
+.cart-wrapper {
+  animation-name: cartshow;
+  animation-duration: 0.2s;
+}
+@keyframes cartshow {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.checkout-btn {
+  width: 60%;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-top: 2%;
+}

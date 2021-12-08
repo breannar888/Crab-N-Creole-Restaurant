@@ -46,7 +46,7 @@ class Form extends Component {
 
     return (
       <div className="reserve">
-        <label for="datefield">Make a Reservation</label>
+        <label htmlFor="datefield">Make a Reservation</label>
         <form onSubmit={this.handleSubmit}>
           <input
             aria-label="Select Date"
@@ -62,7 +62,6 @@ class Form extends Component {
             aria-label="Pick A Time"
             value={this.state.time}
             onChange={this.handleTimeChange}
-            defaultValue={{ id: "1", time: "10:00 AM" }}
             required
           >
             {times.map((eattime) => (

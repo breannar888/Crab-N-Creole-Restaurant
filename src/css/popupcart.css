@@ -1,0 +1,32 @@
+.cart-wrapper {
+  -webkit-animation-name: cartshow;
+          animation-name: cartshow;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+}
+
+@-webkit-keyframes cartshow {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes cartshow {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.checkout-btn {
+  width: 60%;
+  text-decoration: none;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+/*# sourceMappingURL=popupcart.css.map */
