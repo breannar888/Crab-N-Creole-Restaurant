@@ -12,6 +12,7 @@ import "../css/orderpage.css";
 import { CardMedia } from "@material-ui/core";
 import { addToCart, removeFromCart } from "../context/cart-actions";
 import { connect } from "react-redux";
+import { makeStyles } from "@material-ui/core/styles";
 
 //transfer to own component
 const scrollToTop = () => {
@@ -21,16 +22,30 @@ const scrollToTop = () => {
   });
 };
 
-const OrderItems = ({ product, addToCart }) => {
-  const { handleShow, dispatch } = CartState();
+const menuStyles = makeStyles((theme) => ({
+  proddescription: {
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "13px",
+    },
+  },
+  prodimage: {
+    [theme.breakpoints.down("xs")]: {
+      height: "auto",
+      width: "120px",
+    },
+  },
+}));
 
+const OrderItems = ({ product, addToCart }) => {
+  const { handleShow } = CartState();
+  const classes = menuStyles();
   return (
-    <Card sx={{ display: "flex", height: 250 }}>
+    <Card sx={{ display: "flex", height: "auto" }}>
       <CardMedia
+        className={classes.prodimage}
         component="img"
-        sx={{
-          width: 151,
-        }}
+        width="150"
+        height="250"
         image={product.image}
         alt={product.title}
       />
@@ -43,7 +58,11 @@ const OrderItems = ({ product, addToCart }) => {
         >
           {product.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          className={classes.proddescription}
+          variant="body2"
+          color="text.secondary"
+        >
           {product.description}
         </Typography>
         <Typography variant="overline" color="rgb(11, 14, 48)">

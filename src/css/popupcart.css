@@ -5,6 +5,12 @@
           animation-duration: 0.2s;
 }
 
+@media only screen and (min-width: 1200px) {
+  .cart-wrapper {
+    width: 100%;
+  }
+}
+
 @-webkit-keyframes cartshow {
   from {
     opacity: 50%;
@@ -26,7 +32,8 @@
 .checkout-btn {
   width: 60%;
   text-decoration: none;
-  margin-left: 5%;
+  margin-left: 2%;
   margin-top: 2%;
+  padding-right: 2%;
 }
 /*# sourceMappingURL=popupcart.css.map */

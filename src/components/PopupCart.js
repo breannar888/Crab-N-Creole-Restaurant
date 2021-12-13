@@ -1,9 +1,5 @@
 import { CartState } from "../context/CartContext";
-import {
-  Box,
-  Button,
-  Typography,
-} from "@mui/material";
+import { Box, Button, createMuiTheme, Typography } from "@mui/material";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
@@ -12,9 +8,10 @@ import "../css/popupcart.css";
 import { connect } from "react-redux";
 import { removeFromCart, emptyCart } from "../context/cart-actions";
 import CartItems from "./CartItems";
+import { makeStyles } from "@material-ui/core/styles";
 
 const PopupCart = ({ cart, emptyCart }) => {
-  const { handleClose, showCart } = CartState();
+  const { handleClose } = CartState();
 
   const [total, setTotal] = useState();
   useEffect(() => {
@@ -23,16 +20,42 @@ const PopupCart = ({ cart, emptyCart }) => {
     );
   }, [cart]);
 
+  const popupStyles = makeStyles((theme) => ({
+    popupWrapper: {
+      [theme.breakpoints.up("md")]: {
+        width: "25%",
+      },
+      [theme.breakpoints.down("md")]: {
+        width: "35%",
+        height: "100vh",
+        maxHeight: "100vh",
+        top: 0,
+        right: 0,
+        position: "fixed",
+      },
+      [theme.breakpoints.down("xs")]: {
+        width: "100%",
+      }
+    },
+    popupTotal: {
+      [theme.breakpoints.down("md")]: {
+        position: "absolute",
+        bottom: 25,
+      },
+    },
+  }));
+
+  const classes = popupStyles();
+
   return (
     <Box
-      className={showCart ? "cart-wrapper" : "cart-wrapper-close"}
+      className={classes.popupWrapper}
       sx={{
         position: "absolute",
         boxShadow: 5,
-        width: "25%",
         maxHeight: "60vh",
         backgroundColor: "white",
-        right: 25,
+        right: 15,
         zIndex: 1400,
         overflowY: "scroll",
       }}
@@ -80,10 +103,12 @@ const PopupCart = ({ cart, emptyCart }) => {
               ))}
               <Box
                 component="div"
+                className={classes.popupTotal}
                 sx={{
                   width: "100%",
                   height: "auto",
                   background: "white",
+                  borderTop: "2px solid lightgray",
                 }}
               >
                 <Box
@@ -120,7 +145,7 @@ const PopupCart = ({ cart, emptyCart }) => {
                   sx={{
                     pb: "2%",
                     display: "flex",
-                    justifyContent: "space-around",
+                    justifyContent: "left",
                   }}
                 >
                   <NavLink to="/order" className="checkout-btn">
@@ -129,7 +154,6 @@ const PopupCart = ({ cart, emptyCart }) => {
                         width: "100%",
                         background: "rgb(11, 14, 48)",
                         color: "white",
-
                         height: "auto",
                         "&:hover": {
                           background: "rgb(20, 25, 85)",
@@ -144,9 +168,9 @@ const PopupCart = ({ cart, emptyCart }) => {
                     sx={{
                       background: "grey",
                       color: "white",
-                      display: "flex",
-                      margin: "auto",
                       mt: "2%",
+                      mr: "2%",
+                      width: "50%",
                       "&:hover": {
                         background: "red",
                       },

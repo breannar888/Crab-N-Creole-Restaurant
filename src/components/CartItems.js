@@ -33,12 +33,13 @@ const CartItems = ({ changeQty, removeFromCart, prodID }) => {
         mt: "1%",
         mb: ".5%",
         display: "flex",
+        justifyContent: "space-between",
       }}
     >
       <Box
         component="div"
         sx={{
-          width: "40%",
+          width: 150,
           height: 100,
         }}
       >
@@ -46,16 +47,11 @@ const CartItems = ({ changeQty, removeFromCart, prodID }) => {
           component="img"
           image={prodID.image}
           sx={{
-            width: 150,
-            height: 100,
+            maxHeight: 100,
           }}
         ></CardMedia>
       </Box>
-      <Box
-        sx={{
-          width: "50%",
-        }}
-      >
+      <Box component="div">
         <Box
           sx={{
             justifyContent: "space-between",
@@ -80,20 +76,12 @@ const CartItems = ({ changeQty, removeFromCart, prodID }) => {
             >
               {prodID.title}
             </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Playfair Display",
-                fontStyle: "serif",
-                fontSize: "17px",
-              }}
-            >
-              ${prodID.price}
-            </Typography>
           </Box>
           <FormControl
-          sx={{
-              width: .3,
-          }}>
+            sx={{
+              width: 0.7,
+            }}
+          >
             <input
               min="1"
               max="20"
@@ -105,34 +93,40 @@ const CartItems = ({ changeQty, removeFromCart, prodID }) => {
             />
           </FormControl>
         </Box>
-        <Box
+      </Box>
+      <Box
+        component="div"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        <Typography
           sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-            width: "170%",
-            pt: "20%",
+            fontFamily: "Playfair Display",
+            fontStyle: "serif",
+            fontSize: "17px",
+            textAlign: "center",
           }}
         >
-          <Button
-            sx={{
-              display: "flex",
-              color: "rgb(11, 14, 48)",
-              bottom: 10,
-              right: 30,
-              position: "absolute",
+          ${prodID.price}
+        </Typography>
+        <Button
+          sx={{
+            color: "rgb(11, 14, 48)",
+            background: "white",
+            "&:hover": {
+              color: "red",
               background: "white",
-              "&:hover": {
-                color: "red",
-                background: "white",
-              },
-            }}
-            onClick={() => {
-              removeFromCart(prodID.id);
-            }}
-          >
-            <FontAwesomeIcon size="lg" icon={faTrashAlt}></FontAwesomeIcon>
-          </Button>
-        </Box>
+            },
+          }}
+          onClick={() => {
+            removeFromCart(prodID.id);
+          }}
+        >
+          <FontAwesomeIcon size="lg" icon={faTrashAlt}></FontAwesomeIcon>
+        </Button>
       </Box>
     </Card>
   );

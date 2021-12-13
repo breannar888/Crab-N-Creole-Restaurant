@@ -3,7 +3,7 @@
 .nav-menu {
   font-family: "Playfair Display", serif;
   background-color: rgb(255, 255, 255);
-  width: 230px;
+  width: 250px;
   position: fixed;
   height: 100vh;
   left: 0;
@@ -30,6 +30,7 @@
   font-family: "Playfair Display", serif;
   position: fixed;
   left: -100%;
+  width: 250px;
   transition: 850ms;
   height: 100vh;
   z-index: 999;
@@ -89,6 +90,7 @@ nav ul {
 }
 .logo {
   display: none;
+  width: 20%;
   position: relative;
   color: rgb(11, 14, 48);
   a {
@@ -116,13 +118,11 @@ nav ul {
   }
   .logo {
     display: unset;
-    left: 0;
     font-size: 2.5em;
     font-family: "Montez", cursive;
-    margin: auto;
+    margin: auto 2% auto 2%;
     position: relative;
-    width: 50%;
-    padding-left: 2%;
+    width: 200px;
     text-decoration: none;
   }
   .logo-txt {
@@ -138,18 +138,19 @@ nav ul {
   }
   .nav-menu {
     position: unset;
-    width: 52%;
+    margin-left: auto;
+    width: 80%;
     height: auto;
     transition: 0ms;
     ul {
       margin: auto;
       margin-top: unset;
       display: flex;
-      justify-content: space-between;
+      justify-content: right;
     }
     li {
-      font-size: 1.4em;
-      margin-right: 1em;
+      font-size: 1.26em;
+      margin: 0 1em 0 1em;
       a:hover {
         font-weight: unset;
         color: rgba(196, 162, 117, 0.74);
@@ -159,64 +160,66 @@ nav ul {
         outline-offset: 5px;
       }
     }
-    .shopicon {
-      width: 10%;
+    .shop {
+      width: 4%;
       border-radius: 10%;
-      a {
-        width: 100%;
-        color: rgb(11, 14, 48);
-        &:hover {
-          color: rgb(20, 25, 85);
-        }
+      display: flex;
+      justify-content: center;
+      background-color: rgb(11, 14, 48);
+      &:hover {
+        background-color: rgb(1, 14, 126);
       }
     }
-    .shop {
-      width: 70%;
+    .shopicon {
       margin: auto;
-      &:hover {
-        color:  rgb(27, 37, 150);
-      }
+      padding-right: 5px;
+      color: white;
+    }
+    .shopcount {
+      color: white;
     }
   }
   .nav-menu-active {
     position: unset;
-    width: 52%;
+    margin-left: auto;
+    width: 80%;
     height: auto;
     transition: 0ms;
     ul {
       margin: auto;
       margin-top: unset;
       display: flex;
-      justify-content: space-between;
-    }
-    ul li {
-      font-size: 1.4em;
-      margin-right: 1em;
-      a:hover {
-        font-weight: unset;
-        color: rgba(196, 162, 117, 0.74);
-      }
-      &:focus {
-        outline: 1px solid rgb(0, 3, 206);
-        outline-offset: 5px;
-      }
-    }
-    .shopicon {
-      width: 10%;
-      border-radius: 10%;
-      a {
-        width: 100%;
-        color: rgb(11, 14, 48);
-        &:hover {
-          color: rgb(20, 25, 85);
+      justify-content: right;
+
+      li {
+        font-size: 1.26em;
+        margin: 0 1em 0 1em;
+        a:hover {
+          font-weight: unset;
+          color: rgba(196, 162, 117, 0.74);
+        }
+        &:focus {
+          outline: 1px solid rgb(0, 3, 206);
+          outline-offset: 5px;
         }
       }
-    }
-    .shop {
-      width: 70%;
-      margin: auto;
-      &:hover {
-        color:  rgb(27, 37, 150);
+      .shop {
+        width: 4%;
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(11, 14, 48);
+        &:hover {
+          background-color: rgb(1, 14, 126);
+        }
+      }
+      .shopicon {
+        margin: auto;
+        padding-right: 5px;
+        color: white;
+      }
+      .shopcount {
+        color: white;
       }
     }
   }

@@ -21,7 +21,7 @@ const NavBar = ({ cart }) => {
     cart.forEach((item) => {
       count += item.qty;
     });
-    
+
     setcartCount(count);
   }, [cart, cartCount]);
 
@@ -77,13 +77,15 @@ const NavBar = ({ cart }) => {
                 Order Now
               </NavLink>
             </li>
-            <li className="shopicon" onClick={showShopCart}>
-              <FontAwesomeIcon
-                className="shop"
-                size="1x"
-                icon={faShoppingBag}
-              />
-              {cartCount}
+            <li className="shop" onClick={showShopCart}>
+              <div>
+                <FontAwesomeIcon
+                  className="shopicon"
+                  size="1x"
+                  icon={faShoppingBag}
+                />
+              </div>
+              <div className="shopcount">{cartCount}</div>
             </li>
           </ul>
         </nav>

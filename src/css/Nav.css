@@ -2,7 +2,7 @@
 .nav-menu {
   font-family: "Playfair Display", serif;
   background-color: white;
-  width: 230px;
+  width: 250px;
   position: fixed;
   height: 100vh;
   left: 0;
@@ -34,6 +34,7 @@
   font-family: "Playfair Display", serif;
   position: fixed;
   left: -100%;
+  width: 250px;
   -webkit-transition: 850ms;
   transition: 850ms;
   height: 100vh;
@@ -101,6 +102,7 @@ nav ul li a:hover {
 
 .logo {
   display: none;
+  width: 20%;
   position: relative;
   color: #0b0e30;
 }
@@ -130,13 +132,11 @@ nav ul li a:hover {
   }
   .logo {
     display: unset;
-    left: 0;
     font-size: 2.5em;
     font-family: "Montez", cursive;
-    margin: auto;
+    margin: auto 2% auto 2%;
     position: relative;
-    width: 50%;
-    padding-left: 2%;
+    width: 200px;
     text-decoration: none;
   }
   .logo-txt {
@@ -152,7 +152,8 @@ nav ul li a:hover {
   }
   .nav-menu {
     position: unset;
-    width: 52%;
+    margin-left: auto;
+    width: 80%;
     height: auto;
     -webkit-transition: 0ms;
     transition: 0ms;
@@ -163,13 +164,13 @@ nav ul li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
   }
   .nav-menu li {
-    font-size: 1.4em;
-    margin-right: 1em;
+    font-size: 1.26em;
+    margin: 0 1em 0 1em;
   }
   .nav-menu li a:hover {
     font-weight: unset;
@@ -179,27 +180,32 @@ nav ul li a:hover {
     outline: 1px solid #0003ce;
     outline-offset: 5px;
   }
-  .nav-menu .shopicon {
-    width: 10%;
-    border-radius: 10%;
-  }
-  .nav-menu .shopicon a {
-    width: 100%;
-    color: #0b0e30;
-  }
-  .nav-menu .shopicon a:hover {
-    color: #141955;
-  }
   .nav-menu .shop {
-    width: 70%;
-    margin: auto;
+    width: 4%;
+    border-radius: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #0b0e30;
   }
   .nav-menu .shop:hover {
-    color: #1b2596;
+    background-color: #010e7e;
+  }
+  .nav-menu .shopicon {
+    margin: auto;
+    padding-right: 5px;
+    color: white;
+  }
+  .nav-menu .shopcount {
+    color: white;
   }
   .nav-menu-active {
     position: unset;
-    width: 52%;
+    margin-left: auto;
+    width: 80%;
     height: auto;
     -webkit-transition: 0ms;
     transition: 0ms;
@@ -210,13 +216,13 @@ nav ul li a:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
   }
   .nav-menu-active ul li {
-    font-size: 1.4em;
-    margin-right: 1em;
+    font-size: 1.26em;
+    margin: 0 1em 0 1em;
   }
   .nav-menu-active ul li a:hover {
     font-weight: unset;
@@ -226,23 +232,27 @@ nav ul li a:hover {
     outline: 1px solid #0003ce;
     outline-offset: 5px;
   }
-  .nav-menu-active .shopicon {
-    width: 10%;
+  .nav-menu-active ul .shop {
+    width: 4%;
     border-radius: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #0b0e30;
   }
-  .nav-menu-active .shopicon a {
-    width: 100%;
-    color: #0b0e30;
+  .nav-menu-active ul .shop:hover {
+    background-color: #010e7e;
   }
-  .nav-menu-active .shopicon a:hover {
-    color: #141955;
-  }
-  .nav-menu-active .shop {
-    width: 70%;
+  .nav-menu-active ul .shopicon {
     margin: auto;
+    padding-right: 5px;
+    color: white;
   }
-  .nav-menu-active .shop:hover {
-    color: #1b2596;
+  .nav-menu-active ul .shopcount {
+    color: white;
   }
 }
 /*# sourceMappingURL=Nav.css.map */
