@@ -28,7 +28,7 @@ export const changeQty = (prodID, value) => {
   };
 };
 
-export const emptyCart = (prodID) => {
+export const emptyCart = () => {
     return {
       type: actionTypes.EMPTY_CART,
     };

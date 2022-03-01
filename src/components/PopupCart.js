@@ -18,7 +18,8 @@ const PopupCart = ({ cart, emptyCart }) => {
     setTotal(
       cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
     );
-  }, [cart]);
+  }, [cart])
+  ;
 
   const popupStyles = makeStyles((theme) => ({
     popupWrapper: {

@@ -113,7 +113,7 @@ const CartItems = ({ changeQty, removeFromCart, prodID }) => {
             textAlign: "center",
           }}
         >
-          ${prodID.price}
+          ${prodID.price * prodID.qty}
         </Typography>
         <Button
           sx={{
