@@ -84,6 +84,34 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+nav ul .shop {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0b0e30;
+}
+
+nav ul .shop:hover {
+  background-color: #010e7e;
+}
+
+nav ul .shopicon {
+  margin: auto;
+  padding-right: 5px;
+  color: white;
+}
+
+nav ul .shopcount {
+  color: white;
+}
+
 .menu-btn {
   cursor: pointer;
   padding: 1.4%;

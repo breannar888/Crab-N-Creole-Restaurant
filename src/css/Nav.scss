@@ -72,6 +72,24 @@ nav ul {
       font-weight: bold;
     }
   }
+  .shop {
+    width: fit-content;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(11, 14, 48);
+    &:hover {
+      background-color: rgb(1, 14, 126);
+    }
+  }
+  .shopicon {
+    margin: auto;
+    padding-right: 5px;
+    color: white;
+  }
+  .shopcount {
+    color: white;
+  }
 }
 .menu-btn {
   cursor: pointer;
