@@ -41,10 +41,3 @@ function App() {
 }
 
 export default App;
-/*
-const [showCart, setShowCart] = useState(false);
-
-<CartContext.Provider value={{ showCart, setShowCart }}>
-        {showCart ? <PopupCart /> : <OrderMenu />}
-      </CartContext.Provider>
-*/

@@ -14,14 +14,6 @@ import { addToCart, removeFromCart } from "../context/cart-actions";
 import { connect } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 
-//transfer to own component
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
-
 const menuStyles = makeStyles((theme) => ({
   proddescription: {
     [theme.breakpoints.down("xs")]: {
@@ -92,7 +84,7 @@ const OrderItems = ({ product, addToCart }) => {
               onClick={() => {
                 addToCart(product.id);
                 handleShow();
-                scrollToTop();
+              
               }}
             >
               Add to Cart
@@ -112,42 +104,3 @@ const mapDispatchtoProps = (dispatch) => {
 };
 
 export default connect(null, mapDispatchtoProps)(OrderItems);
-
-/*
-{cart.some((p) => p.id === product.id) ? (
-              <Button
-                sx={{
-                  color: "white",
-                  background: "rgb(196, 162, 117)",
-                  "&:hover": {
-                    background: "rgb(11, 14, 48)",
-                  },
-                }}
-                onClick={() => {
-                  dispatch({
-                    type: "REMOVE_FROM_CART",
-                    payload: product,
-                  });
-                }}
-              >
-                Remove From Cart
-              </Button>
-            ) : (
-              <Button
-                sx={{
-                  color: "white",
-                  background: "rgb(196, 162, 117)",
-                  "&:hover": {
-                    background: "rgb(11, 14, 48)",
-                  },
-                }}
-                onClick={() => {
-                  addToCart(product.id);
-                  handleShow();
-                  scrollToTop();
-                }}
-              >
-                Add to Cart
-              </Button>
-            )}
-*/
