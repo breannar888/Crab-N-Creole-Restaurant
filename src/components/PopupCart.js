@@ -23,7 +23,7 @@ const PopupCart = ({ cart, emptyCart }) => {
   const popupStyles = makeStyles((theme) => ({
     popupWrapper: {
       [theme.breakpoints.up("md")]: {
-        width: "25%",
+        width: "27%",
       },
       [theme.breakpoints.down("md")]: {
         width: "35%",
@@ -35,7 +35,7 @@ const PopupCart = ({ cart, emptyCart }) => {
       },
       [theme.breakpoints.down("xs")]: {
         width: "100%",
-      }
+      },
     },
     popupTotal: {
       [theme.breakpoints.down("md")]: {
@@ -53,11 +53,10 @@ const PopupCart = ({ cart, emptyCart }) => {
       sx={{
         position: "absolute",
         boxShadow: 5,
-        maxHeight: "60vh",
+        maxHeight: "70vh",
         backgroundColor: "white",
-        right: 15,
+        right: 0,
         zIndex: 1400,
-        overflowY: "scroll",
       }}
     >
       <Box
@@ -66,6 +65,7 @@ const PopupCart = ({ cart, emptyCart }) => {
           justifyContent: "space-between",
           background: "rgb(196, 162, 117)",
           p: "2%",
+          top: 0,
         }}
       >
         <Typography
@@ -97,7 +97,10 @@ const PopupCart = ({ cart, emptyCart }) => {
       <Box>
         <Box>
           {cart.length > 0 ? (
-            <Box>
+            <Box sx={{
+              overflowY: "scroll",
+              maxHeight: "50vh",
+            }}>
               {cart.map((cartItems) => (
                 <CartItems key={cartItems.id} prodID={cartItems} />
               ))}
@@ -148,7 +151,7 @@ const PopupCart = ({ cart, emptyCart }) => {
                     justifyContent: "left",
                   }}
                 >
-                  <NavLink to="/order" className="checkout-btn">
+                  <NavLink to="/checkout" className="checkout-btn">
                     <Button
                       sx={{
                         width: "100%",

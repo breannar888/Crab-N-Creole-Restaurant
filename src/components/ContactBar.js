@@ -20,7 +20,7 @@ function ContactBar() {
           <h2>Contact Us</h2>
           <ul>
             <li>Phone: 111-111-1111</li>
-            <li>Email: crabncajun@example.com</li>
+            <li>Email: crabncreole@example.com</li>
           </ul>
         </div>
         <div className="text-wrap-mid" id="reservation">

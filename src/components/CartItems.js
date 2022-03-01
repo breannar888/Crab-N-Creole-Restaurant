@@ -72,6 +72,9 @@ const CartItems = ({ changeQty, removeFromCart, prodID }) => {
                 fontFamily: "Playfair Display",
                 fontStyle: "serif",
                 fontSize: "15px",
+                textOverflow: "ellipsis",
+                maxWidth: "150px",
+                overflow: "hidden",
               }}
             >
               {prodID.title}
