@@ -1,5 +1,5 @@
 import { CartState } from "../context/CartContext";
-import { Box, Button, createMuiTheme, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
@@ -18,21 +18,20 @@ const PopupCart = ({ cart, emptyCart }) => {
     setTotal(
       cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
     );
-  }, [cart])
-  ;
+  }, [cart]);
 
   const popupStyles = makeStyles((theme) => ({
     popupWrapper: {
       [theme.breakpoints.up("md")]: {
         width: "27%",
+        position: "absolute",
       },
       [theme.breakpoints.down("md")]: {
         width: "35%",
-        height: "100vh",
+        height: "150vh",
         maxHeight: "100vh",
-        top: 0,
-        right: 0,
         position: "fixed",
+        top: 0,
       },
       [theme.breakpoints.down("xs")]: {
         width: "100%",
@@ -48,8 +47,8 @@ const PopupCart = ({ cart, emptyCart }) => {
       [theme.breakpoints.down("md")]: {
         maxHeight: "82vh",
         overflowY: "scroll",
-      }
-    }
+      },
+    },
   }));
 
   const classes = popupStyles();
@@ -58,7 +57,6 @@ const PopupCart = ({ cart, emptyCart }) => {
     <Box
       className={classes.popupWrapper}
       sx={{
-        position: "absolute",
         boxShadow: 5,
         maxHeight: "70vh",
         backgroundColor: "white",
@@ -104,10 +102,13 @@ const PopupCart = ({ cart, emptyCart }) => {
       <Box>
         <Box>
           {cart.length > 0 ? (
-            <Box className={classes.popupItems} sx={{
-              overflowY: "scroll",
-              maxHeight: "60vh",
-            }}>
+            <Box
+              className={classes.popupItems}
+              sx={{
+                overflowY: "scroll",
+                maxHeight: "60vh",
+              }}
+            >
               {cart.map((cartItems) => (
                 <CartItems key={cartItems.id} prodID={cartItems} />
               ))}
