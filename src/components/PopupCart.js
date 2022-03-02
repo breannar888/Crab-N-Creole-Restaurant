@@ -44,6 +44,12 @@ const PopupCart = ({ cart, emptyCart }) => {
         bottom: 25,
       },
     },
+    popupItems: {
+      [theme.breakpoints.down("md")]: {
+        maxHeight: "82vh",
+        overflowY: "scroll",
+      }
+    }
   }));
 
   const classes = popupStyles();
@@ -98,9 +104,9 @@ const PopupCart = ({ cart, emptyCart }) => {
       <Box>
         <Box>
           {cart.length > 0 ? (
-            <Box sx={{
+            <Box className={classes.popupItems} sx={{
               overflowY: "scroll",
-              maxHeight: "50vh",
+              maxHeight: "60vh",
             }}>
               {cart.map((cartItems) => (
                 <CartItems key={cartItems.id} prodID={cartItems} />
