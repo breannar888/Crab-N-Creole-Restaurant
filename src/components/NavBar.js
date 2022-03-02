@@ -35,7 +35,7 @@ const NavBar = ({ cart }) => {
   const { showCart, showShopCart, handleClose } = CartState();
 
   return (
-    <>
+    <div className="nav-wrap">
       <button
         className="menu-btn"
         tabIndex="1"
@@ -91,7 +91,7 @@ const NavBar = ({ cart }) => {
         </nav>
       </div>
       <div>{showCart ? <PopupCart /> : null}</div>
-    </>
+    </div>
   );
 };
 
