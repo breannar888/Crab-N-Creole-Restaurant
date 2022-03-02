@@ -3,10 +3,66 @@ import { Box, Typography, Button, Card, CardMedia } from "@mui/material";
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { connect } from "react-redux";
-import { removeFromCart, emptyCart } from "../context/cart-actions";
+import { removeFromCart } from "../context/cart-actions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+
+const checkoutStyles = makeStyles((theme) => ({
+  checkoutWrapper: {
+    [theme.breakpoints.down("sm")]: {
+      position: "relative",
+      margin: 0,
+      padding: 0,
+      flexDirection: "column",
+      width: "100%",
+    },
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      justifyContent: "space-between",
+      margin: "3%",
+    },
+  },
+  checkoutSummary: {
+    [theme.breakpoints.down("sm")]: {
+      backgroundColor: "rgb(238, 238, 238)",
+      padding: "3%",
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundColor: "rgb(238, 238, 238)",
+      width: "55%",
+      padding: "3%",
+    },
+  },
+  checkoutPrice: {
+    [theme.breakpoints.down("sm")]: {
+      padding: "1%",
+      marginTop: "1%",
+      backgroundColor: "rgb(196, 162, 117)",
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundColor: "rgb(196, 162, 117)",
+      width: "35%",
+      padding: "1%",
+    },
+  },
+  checkoutBtnsWrap: {
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "auto",
+      marginRight: "auto",
+      width: "50%",
+    },
+  },
+  checkoutBtns: {
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "100%",
+    },
+  },
+}));
 
 const Checkout = ({ cart, removeFromCart }) => {
   const [total, setTotal] = useState(0);
@@ -33,7 +89,7 @@ const Checkout = ({ cart, removeFromCart }) => {
     );
   }, [cart]);
 
-  console.log("tax:", tax);
+  const classes = checkoutStyles();
   return (
     <Box>
       <Typography
@@ -49,22 +105,8 @@ const Checkout = ({ cart, removeFromCart }) => {
       >
         Your Order
       </Typography>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          pl: "10%",
-          pr: "10%",
-          pb: "3%",
-        }}
-      >
-        <Box
-          sx={{
-            backgroundColor: "rgb(238, 238, 238)",
-            width: "55%",
-            p: "3%",
-          }}
-        >
+      <Box className={classes.checkoutWrapper}>
+        <Box className={classes.checkoutSummary}>
           {cart.length > 0 ? (
             <div>
               {cart.map((cartItems) => (
@@ -182,16 +224,10 @@ const Checkout = ({ cart, removeFromCart }) => {
             </div>
           )}
         </Box>
-        <Box
-          sx={{
-            backgroundColor: "rgb(196, 162, 117)",
-            width: "35%",
-            p: "1%",
-          }}
-        >
+        <Box className={classes.checkoutPrice}>
           <Box
             sx={{
-              mb: "5%",
+              mb: "3%",
               textAlign: "center",
             }}
           >
@@ -223,15 +259,11 @@ const Checkout = ({ cart, removeFromCart }) => {
               Subtotal: ${subtotal.toFixed(2)}
             </Typography>
           </Box>
-          <Box
-            sx={{
-              bottom: 0,
-            }}
-          >
+          <Box className={classes.checkoutBtnsWrap}>
             <NavLink to="/order">
               <Button
+                className={classes.checkoutBtns}
                 sx={{
-                  width: "100%",
                   background: "grey",
                   color: "white",
                   mb: "2%",
@@ -245,8 +277,8 @@ const Checkout = ({ cart, removeFromCart }) => {
               </Button>
             </NavLink>
             <Button
+              className={classes.checkoutBtns}
               sx={{
-                width: "100%",
                 background: "rgb(11, 14, 48)",
                 color: "white",
                 "&:hover": {
