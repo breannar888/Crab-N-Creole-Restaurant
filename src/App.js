@@ -11,6 +11,7 @@ import "normalize.css";
 import OrderPage from "./pages/Order";
 import CheckoutPage from "./pages/CheckoutPage";
 import CartContextProvider from "./context/CartContext";
+import CheckoutConfirmation from "./components/Confirmation";
 function App() {
   return (
     <>
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route path="/checkout">
               <CheckoutPage />
+            </Route>
+            <Route path="/confirm">
+              <CheckoutConfirmation />
             </Route>
           </Switch>
         </Layout>

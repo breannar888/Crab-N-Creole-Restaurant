@@ -276,18 +276,20 @@ const Checkout = ({ cart, removeFromCart }) => {
                 Order More
               </Button>
             </NavLink>
-            <Button
-              className={classes.checkoutBtns}
-              sx={{
-                background: "rgb(11, 14, 48)",
-                color: "white",
-                "&:hover": {
-                  background: "rgb(20, 25, 85)",
-                },
-              }}
-            >
-              Checkout
-            </Button>
+            <NavLink to="/confirm">
+              <Button
+                className={classes.checkoutBtns}
+                sx={{
+                  background: "rgb(11, 14, 48)",
+                  color: "white",
+                  "&:hover": {
+                    background: "rgb(20, 25, 85)",
+                  },
+                }}
+              >
+                Confirm Order
+              </Button>
+            </NavLink>
           </Box>
         </Box>
       </Box>
